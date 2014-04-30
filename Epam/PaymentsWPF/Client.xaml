@@ -1,0 +1,36 @@
+﻿<Window x:Class="PaymentsWPF.Client"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Payments | Client" Height="450" Width="799">
+    <Grid>
+        <Label Content="Вы зашли как: " Height="33" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" VerticalAlignment="Top" Width="99" />
+        <Label Content="Noname" Height="28" HorizontalAlignment="Left" Margin="97,10,0,0" Name="labelClientName" VerticalAlignment="Top" />
+        <Label Content="Ваш персональный id: " Height="28" HorizontalAlignment="Left" Margin="10,28,0,0" Name="label2" VerticalAlignment="Top" />
+        <Label Content="0" Height="28" HorizontalAlignment="Left" Margin="137,28,0,0" Name="labelClientId" VerticalAlignment="Top" />
+        <TabControl Height="338" HorizontalAlignment="Left" Margin="10,62,0,0" Name="tabControl1" VerticalAlignment="Top" Width="758">
+            <TabItem Header="Счета" Name="tabItem1">
+                <Grid>
+                    <ListBox FontSize="16" Height="290" HorizontalAlignment="Left" Margin="10,10,0,0" Name="listBoxCards" VerticalAlignment="Top" Width="350" SelectionChanged="listBoxCards_SelectionChanged" />
+                    <Label Content="Выберите счет" Height="28" HorizontalAlignment="Left" Margin="366,10,0,0" Name="labelSelectedCardCreatedDate" VerticalAlignment="Top" />
+                    <Label Height="28" HorizontalAlignment="Left" Margin="366,78,0,0" Name="labelSelectedCardBlockedDate" VerticalAlignment="Top" />
+                    <Label Height="28" HorizontalAlignment="Left" Margin="366,112,0,0" Name="labelSelectedCardBlockedUser" VerticalAlignment="Top" />
+                    <Label FontSize="14" FontWeight="Bold" Height="28" HorizontalAlignment="Left" Margin="366,0,0,132" Name="labelSelectedCardRest" VerticalAlignment="Bottom" />
+                    <Label Height="28" HorizontalAlignment="Left" Margin="366,44,0,0" Name="labelSelectedCardStatus" VerticalAlignment="Top" />
+                    <Button Content="Заблокировать счет" Height="23" HorizontalAlignment="Left" Margin="608,45,0,0" Name="buttonBlockCard" VerticalAlignment="Top" Width="135" Click="buttonBlockCard_Click" />
+                    <Grid Height="113" Margin="366,187,31,6" Name="grid1" Width="351">
+                        <ComboBox Height="28" HorizontalAlignment="Left" Margin="129,6,0,0" Name="comboBoxChengeRestType" VerticalAlignment="Top" Width="212" />
+                        <TextBox Height="28" HorizontalAlignment="Left" Margin="194,42,0,0" Name="textBoxChangeRestSum" VerticalAlignment="Top" Width="147" TextChanged="textBoxSum_TextChanged" />
+                        <Label Content="Выберите действие" Height="28" HorizontalAlignment="Left" Margin="6,6,0,0" Name="label4" VerticalAlignment="Top" />
+                        <Label Content="Введите сумму" Height="28" HorizontalAlignment="Left" Margin="6,42,0,0" Name="label5" VerticalAlignment="Top" />
+                        <Button Content="Изменить остаток на счете" Height="29" HorizontalAlignment="Left" Margin="6,76,0,0" Name="buttonChangeRest" VerticalAlignment="Top" Width="335" Click="buttonChangeRest_Click" />
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Архив платежей">
+                <Grid Height="289" Name="grid2" Width="740">
+                    <ListBox Height="277" HorizontalAlignment="Left" Margin="7,6,0,0" Name="listBoxPayments" VerticalAlignment="Top" Width="727" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

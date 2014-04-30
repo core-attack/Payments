@@ -1,0 +1,20 @@
+﻿<Window x:Class="PaymentsWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Paements | Авторизация" Height="205" Width="708" GotFocus="Window_GotFocus" Closing="Window_Closing">
+    <Grid>
+        <Button Content="Проверить подключение" Height="28" HorizontalAlignment="Left" Margin="504,43,0,0" Name="buttonCheckConnection" VerticalAlignment="Top" Width="154" Click="button1_Click" />
+        <Label Content="Выберите пользователя" Height="28" HorizontalAlignment="Left" Margin="6,43,0,0" Name="label1" VerticalAlignment="Top" />
+        <ComboBox Height="28" HorizontalAlignment="Left" Margin="154,43,0,0" Name="comboBoxUsers" VerticalAlignment="Top" Width="344" FontSize="14" GotFocus="comboBoxUsers_GotFocus" SelectedIndex="1" SelectionChanged="comboBoxUsers_SelectionChanged" DropDownOpened="comboBoxUsers_DropDownOpened" />
+        <Label Content="Введите пароль" Height="28" HorizontalAlignment="Left" Margin="51,79,0,0" Name="label2" VerticalAlignment="Top" />
+        <Button Content="Авторизоваться" Height="28" HorizontalAlignment="Left" Margin="504,79,0,0" Name="buttonSignUp" VerticalAlignment="Top" Width="154" Click="buttonSignUp_Click" />
+        <PasswordBox Height="28" HorizontalAlignment="Left" Margin="154,79,0,0" Name="passwordBox1" VerticalAlignment="Top" Width="344" Password="admin_P@ssw0rd" />
+        <ComboBox Height="28" HorizontalAlignment="Right" Margin="0,115,419,0" Name="comboBoxLogging" VerticalAlignment="Top" Width="113" SelectedIndex="0" SelectionChanged="comboBox1_SelectionChanged">
+            <ComboBoxItem Content="Минимальный" />
+            <ComboBoxItem Content="Средний" />
+            <ComboBoxItem Content="Максимальный" />
+        </ComboBox>
+        <Label Content="Уровень логирования" Height="28" HorizontalAlignment="Left" Margin="12,113,0,0" Name="label18" VerticalAlignment="Top" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="273,115,0,0" Name="labelMessage" VerticalAlignment="Top" />
+    </Grid>
+</Window>
